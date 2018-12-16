@@ -1,0 +1,21 @@
+* Emacs install notes
+*** What is this?
+    + Just a bunch of notes-to-self to get up and running with Emacs on a new
+      install.
+* MELPA
+  + Note that you'll need to run M-x package-refresh-contents or
+    M-x package-list-packages to ensure that Emacs has fetched the MELPA package 
+    list before you can install packages with M-x package-install or similar. 
+  + Add packages:
+      ac-c-headers
+      company
+      company-c-headers
+      company-irony
+      company-irony-c-headers
+      auto-complete
+      auto-complete-c-headers
+      org
+* Trouble
+*** Symbol's value as variable is void: user-emacs-working-directory
+    + Having problems reading the init files correctly, have not yet found a
+    cure. 

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Name:
+#     setupEmacsd
+#
+# Description:
+#     Create ~/.emacs.d directory and soft links to init files.
+#
+# Note:
+#
+# Author, date:
+#     Gijsbert Wierink, December 2018
+
+
+# Functions
+
+
+# Variables
+
+DOT_SCRIPTS_DIR=$HOME/Scripts/dotemacsd
+
+
+# Main program
+
+mkdir $HOME/.emacs.d
+
+if [ ! -d "$DOT_SCRIPTS_DIR" ]; then
+    echo "No Scripts dir, assuming it should be $HOME/Scripts/scripts"
+    echo "Exiting\n"
+    exit 1
+fi
+
+if [ -d "$DOT_SCRIPTS_DIR" ]; then
+    ln -s $DOT_SCRIPTS_DIR/init.el $HOME/.emacs.d/init.el
+    ln -s $DOT_SCRIPTS_DIR/lisp $HOME/.emacs.d/lisp
+fi
+
+
+# --------------------------------------------------------------- # End-of-file
